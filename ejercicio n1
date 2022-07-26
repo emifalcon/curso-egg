@@ -1,0 +1,31 @@
+Algoritmo sin_titulo
+	
+	///Realizar un programa que solicite al usuario su código de usuario
+	///(un número entero mayor que cero) y su contraseña numérica (otro número entero positivo).
+	///El programa no le debe permitir continuar hasta que introduzca como código 1024 y como contraseña 4567.
+	///El programa finaliza cuando ingresa los datos correctos. 
+	
+	Definir Codigo, Contrasena Como Entero
+	
+	Escribir "Ingrese su codigo de usuario: "
+	Leer  Codigo
+	
+	Hacer 
+		Escribir "ERROR! Ingrese su codigo de usuario: "
+		Leer  Codigo
+		
+	Mientras Que Codigo <> 1024
+	
+	Escribir "Codigo correcto!"
+	
+	Escribir "Ingrese su contraseña: "
+	Leer Contrasena
+	
+	Hacer
+		Escribir "ERROR! Ingrese su contraseña: "
+		Leer Contrasena
+	Mientras Que Contrasena <> 4567
+	
+	Escribir "Usted ha ingresado correctamente! "
+
+FinAlgoritmo
