@@ -1,0 +1,81 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Algoritmo Ejercicio08
+	// Un docente de Programación tiene un listado de 3 notas registradas por cada uno de sus
+	// N estudiantes. La nota final se compone de un trabajo práctico Integrador (35%), una
+	// Exposición (25%) y un Parcial (40%). El docente requiere los siguientes informes claves de sus estudiantes:
+	//
+	// a - Nota promedio final de los estudiantes que reprobaron el curso. Un estudiante reprueba el curso 
+	// 	   si tiene una nota final inferior a 6.5
+	// b - Porcentaje de alumnos que tienen una nota de integrador mayor a 7.5.
+	// c - La mayor nota obtenida en las exposiciones.
+	// d - Total de estudiantes que obtuvieron en el Parcial entre 4.0 y 7.5.
+	//
+	// El programa pedirá la cantidad de alumnos que tiene el docente y en cada alumno pedirá
+	// las 3 notas y calculará todos informes claves que requiere el docente.
+	
+	Definir i, notaIntegrador, notaExposicion, notaParcial, notaFinal Como Real
+	Definir totalEstudiantes Como Entero
+	
+	Definir sumaReprobados, totalReprobados Como Real 	// a
+	Definir CantidadAlumnosIntegrador Como Entero			// b
+	Definir mayorNotaExposicion Como Real					// c
+	definir totalEstudiantesParcial Como Entero			// d
+	
+	sumaReprobados = 0
+	totalReprobados = 0
+	CantidadAlumnosIntegrador = 0
+	mayorNotaExposicion = 0
+	totalEstudiantesParcial = 0
+	
+	Escribir "ingrese el total de estudiantes"
+	Leer totalEstudiantes
+	
+	Para i = 1 Hasta totalEstudiantes Hacer
+		Escribir "Ingrese nota del practico integrador"
+		Leer notaIntegrador
+		Escribir "Ingrese nota de Exposicion"
+		Leer notaExposicion
+		Escribir "Ingrese nota de Parcial"
+		Leer notaParcial
+	
+		notaFinal = (notaIntegrador * 0.35) + (notaExposicion * 0.25) + (notaParcial * 0.40)
+		
+		// a)
+		Si notaFinal <= 6.5 Entonces
+			sumaReprobados = sumaReprobados + notaFinal
+			totalReprobados = totalReprobados + 1
+		FinSi
+		
+		// b)
+		Si notaIntegrador >= 7.5 Entonces
+			CantidadAlumnosIntegrador = CantidadAlumnosIntegrador + 1
+		FinSi
+		
+		// c)
+		Si mayorNotaExposicion < notaExposicion Entonces
+			mayorNotaExposicion = notaExposicion
+		FinSi
+		
+		// d)
+		Si (notaParcial >= 4) y (notaParcial <= 7.5) Entonces
+			totalEstudiantesParcial = totalEstudiantesParcial + 1
+		FinSi
+		
+	FinPara
+	
+	Escribir "Total de estudiantes procesador ", totalEstudiantes
+	
+	// para que no haga una division por 0 
+	Si totalReprobados > 0 Entonces
+		Escribir "Nota promedio final de los estudiantes que reprobaron el curso ( ", sumaReprobados / totalReprobados, " )"
+	SiNo
+		Escribir "No se encontraron Alumnos desaprobados."
+	FinSi
+	
+	// para que no haga una division por 0
+	Si totalEstudiantes > 0 Entonces
+		Escribir "Porcentaje de alumnos que tienen una nota de integrador mayor a 7.5 ( ", CantidadAlumnosIntegrador / totalEstudiantes, " )"
+	SiNo
+		Escribir "No se ingresaron Alumnos a procesar"
+	FinSi
