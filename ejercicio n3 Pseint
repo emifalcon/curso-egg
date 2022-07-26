@@ -1,0 +1,99 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+lgoritmo caramelosDeLimon
+	Definir usuario,contra,letra Como Caracter
+	Definir login Como Logico
+	Definir cantidadBotellas,deseo,i,intentos Como Entero
+	Definir saldo,saldoPersonal,peso Como Real
+	login <- Falso
+	
+	
+	
+	Escribir 'Ingresar el usuario'
+	Leer usuario
+	Si usuario='Albus_D' Entonces
+		Escribir 'Ingresar la contraseña'
+		Leer contra
+		intentos <- 1
+		Si contra='caramelosDeLimon' Entonces
+			login <- Verdadero
+		SiNo
+			Mientras intentos<3 Y login=Falso Hacer
+				Escribir 'Contraseña incorrecta. Ingresar la contraseña'
+				Leer contra
+				intentos <- intentos+1
+				Si contra='caramelosDeLimon' Entonces
+					login <- Verdadero
+				FinSi
+			FinMientras
+		FinSi
+	SiNo
+		Escribir "Le pifiaste anda a reiniciar"
+	FinSi
+	saldoPersonal = 1
+	saldo = 0
+	si login = Verdadero Entonces
+		Hacer
+			Escribir "Escribir lo que desea hacer 1/Para Ingresar botellas, 2/Para consultar saldo, 3/Para salir"
+			leer deseo
+			Segun deseo Hacer
+				1:
+					Escribir "Ingresar la cantidad de botellas"
+					leer cantidadBotellas
+					
+					Para i=1 Hasta cantidadBotellas Hacer
+						peso = Aleatorio(100,3000)
+						
+						si peso <= 500 Entonces
+							saldo = saldo + 50
+						SiNo
+							si peso > 500 y peso <= 1500
+								saldo = saldo + 125
+							sino
+								si peso > 1500
+									saldo = saldo + 200
+								FinSi
+							FinSi
+						FinSi
+						
+						
+					FinPara
+					Escribir "El saldo acumulado con este material es $",saldo," insertar y si desea concretar la transaccion o n en caso contrario"
+					leer letra
+					letra = Mayusculas(letra)
+					
+							
+								Escribir "Ingresar Y para aceptar N para denegar"
+								si letra = "Y" Entonces
+									saldoPersonal = saldoPersonal+saldo
+								SiNo
+									si letra = "N" Entonces
+										Escribir "Devolviendo material"
+									SiNo
+										Mientras letra <> "N" y letra <> "Y" Hacer
+											Escribir "Ingresar una letra correcta"
+											leer letra
+											letra = Mayusculas(letra)
+											si letra = "Y" Entonces
+												saldoPersonal = saldoPersonal+saldo
+											SiNo
+												si letra = "N" Entonces
+													Escribir "Devolviendo material"
+												FinSi
+											FinSi
+											
+										FinMientras
+							
+						FinSi
+					FinSi
+				2: 
+					Escribir "El saldo es $",saldoPersonal
+				3: 
+					login = Falso 
+					Escribir "Gracias por elegirnos"
+					
+			FinSegun
+			
+		Mientras Que login = Verdadero
+	FinSi
+FinAlgoritmo
