@@ -1,0 +1,32 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Funcion cantLetra = buscar(frase,letra)
+	Definir auxLetra Como Caracter
+	Definir cantLetra,i,aux Como Entero
+	cantLetra <- 0
+	aux <-Longitud(frase)
+	Para i <-  0 Hasta aux - 1 Hacer
+		auxLetra <- Subcadena(frase,i,i)
+		si auxLetra = letra Entonces
+			cantLetra <- cantLetra+1
+		FinSi
+	FinPara
+FinFuncion
+
+Algoritmo guia3_3
+	
+	Definir letra,frase Como Caracter
+	
+	Escribir "Introducir la frase"
+	leer frase
+	frase <- Mayusculas(frase)
+	
+	Escribir "Introducir letra a buscar"
+	leer letra
+	letra <- Mayusculas(letra)
+	
+	Escribir "El programa encontro ",buscar(frase,letra)," veces la letra ",letra
+	
+	
+	
+FinAlgoritmo
