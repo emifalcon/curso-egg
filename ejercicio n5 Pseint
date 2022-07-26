@@ -1,0 +1,19 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Algoritmo ej3g3
+		Definir num1, num2 Como Entero
+		Escribir "Ingrese un número"
+		Leer num1
+		Escribir "Ingrese otro número"
+		Leer num2
+		Escribir "¿" num1 " es multiplo de " num2 "? " multiplo(num1, num2)
+FinAlgoritmo
+
+Funcion retorno <- multiplo(num1, num2)
+	Definir retorno Como Logico
+	Si num1 mod num2 = 0 Entonces
+		retorno <- Verdadero
+	Sino
+		retorno <- falso
+	FinSi
+FinFuncion
