@@ -1,0 +1,68 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+	Algoritmo ejercicioCooperativoguia2
+		Definir usuario,clave,aceptoImporte Como Caracter
+		Definir veces,opcionMenu,cantidadBotellas,i Como Entero
+		definir acumulaImporte,pesoBotella,saldoCuenta Como Real
+		definir login Como Logico
+		veces = 0
+		acumulaImporte = 0
+		saldoCuenta = 0
+		Hacer
+			veces = veces + 1
+			Escribir veces 'º intento ingreso la usuario....'
+			leer usuario
+			escribir veces 'º intento ingrese la clave....'
+			leer clave
+		Mientras Que  veces < 3 y (clave <> 'caramelosDeLimon' y usuario <> 'Albus_D')
+		
+		
+		si veces >= 3 y (clave <> 'caramelosDeLimon' y usuario <> 'Albus_D')Entonces
+			Escribir 'intentos de accesos agotados'
+			login = Falso
+		SiNo
+			Escribir 'se ha ingresado al sistema'
+			login = Verdadero
+		FinSi	
+		
+		si login = Verdadero Entonces
+			
+			hacer 
+				Escribir "1-) ingresar botellas"
+				Escribir "2-) consultar Saldo"
+				Escribir "3-) salir"
+				leer opcionMenu
+				segun opcionMenu Hacer
+					1:
+						Escribir 'ingrese la cantidad de Botellas'
+						leer cantidadBotellas
+						acumulaImporte = 0 
+						para i = 1 hasta cantidadBotellas
+							pesoBotella = aleatorio(100,3000)
+							Escribir 'El peso de la Botella ', i ' al azar fue de: ' pesoBotella
+							si pesoBotella <= 500 Entonces
+								acumulaImporte = acumulaImporte + 50
+							SiNo
+								si pesoBotella >= 501 y pesoBotella <= 1500 Entonces
+									acumulaImporte = acumulaImporte + 125
+								SiNo
+									si pesoBotella >= 1501 Entonces
+										acumulaImporte = acumulaImporte + 200
+									FinSi
+								FinSi
+							FinSi
+							Escribir 'El valor acumulado es de: ' acumulaImporte
+						FinPara
+						Escribir 'El valor que le corresponde es: ", acumulaImporte, " Acepta = s S"
+						leer aceptoImporte
+						si aceptoImporte = 's' o aceptoImporte ='S'
+							saldoCuenta = saldoCuenta + acumulaImporte 
+						SiNo
+							Escribir "Devolviendo material"
+						FinSi
+					2:
+						Escribir 'la variable saldoCuenta tiene acumulado: ', saldoCuenta
+				FinSegun
+			Mientras que opcionMenu = 1 o opcionMenu = 2
+		FinSi
+FinAlgoritmo
