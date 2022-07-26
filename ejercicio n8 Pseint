@@ -1,0 +1,24 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Funcion resultado = esPar(num)
+	Definir resultado Como Logico
+	resultado <- num % 2 = 0
+FinFuncion
+
+
+Algoritmo ej_2g3
+	
+	Definir num Como Entero
+	
+	Escribir "Ingresar el numero"
+	leer num
+	
+	
+	
+	si esPar(num) Entonces
+		Escribir"El numero es par"
+	SiNo
+		Escribir "El numero no es par"
+	FinSi
+	Escribir  resultado  <> esPar(num)
+FinAlgoritmo
