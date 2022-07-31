@@ -1,0 +1,36 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Funcion suma <- divisores ( n )
+	definir suma,x como entero
+	
+	suma<-0
+	x<-n-1
+	
+	mientras x>0 Hacer
+		
+		si ((n mod x) == 0) entonces
+			
+			suma<-suma+x
+			
+			x<-x-1
+			
+		SiNo
+			
+			Escribir "reintenta de vuelta"
+			
+			x<-x-1
+		FinSi
+		
+		
+	FinMientras
+	
+	
+	
+Fin Funcion
+
+Algoritmo sin_titulo
+	definir n como entero
+	escribir   "escriba un numero"
+	leer n
+	escribir "resultado ",divisores(n)
+	
