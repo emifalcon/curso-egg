@@ -1,0 +1,59 @@
+Algoritmo ej13g4
+	Definir matriz, i, num Como Entero
+	Escribir "ingrese la dimension de la matriz, un valor entre 2 y 3"
+	Repetir
+		Leer num
+		si num > 3 o num<= 1
+			Escribir "El orden de la matriz no puede ser mayor que 10,ingrese otro valor"
+		FinSi
+	Mientras Que num >3 o num<= 1 
+	Dimension matriz(num,num)
+	llenarMatriz(matriz, num)
+	verificador(matriz, num)
+FinAlgoritmo
+
+SubProceso llenarMatriz(matriz Por Referencia, num)
+	Definir f,c,n Como Entero
+	para f<-0 Hasta num-1 Hacer
+		
+		para c<-0 hasta num -1 Hacer
+			Escribir "ingrese un valor entre 1 y 9"
+			Repetir
+				Leer n
+				si n > 9 o n <= 0
+					Escribir "el numero ingresado esta fuera de rango, ingrese otro valor"
+				SiNo
+					matriz(f,c) = n
+				FinSi
+				
+			Mientras Que n > 9 o n <=0
+		FinPara
+	FinPara
+FinSubProceso
+
+subproceso verificador(matriz Por Referencia, num)
+	Definir f,c, sum, sumaFila, sumaCol, sumaDiag1, sumaDiag2 Como Entero
+	Definir condicion Como Logico
+	sum = 0
+	
+	para f <-0 Hasta  num- 1 Hacer
+		sum = sum + matriz(f,0)
+	FinPara
+	
+	para f<-0 Hasta num - 1 Hacer
+		sumaCol = 0
+		sumaFila = 0
+		Para c <- 0 Hasta num - 1 Hacer
+			
+			sumaFila = sumaFila + matriz(f,c)
+			sumaCol = sumaCol + matriz(c, f)
+			
+		FinPara
+		si sumaFila <> sum o sumaCol <> sum Entonces
+			
+		FinSi
+	FinPara
+	
+	
+FinSubProceso
+
