@@ -1,0 +1,24 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+ Algoritmo ejercicio_6_guia3
+	definir a,b Como Entero
+	Escribir "ingrese dos numeros: "
+	leer a,b
+	Escribir "cambiamos los lugares "
+	Escribir  a," - ",b
+	intercambio( a, b )
+    //sin espacio antes del parentesis
+FinAlgoritmo
+
+subproceso intercambio( a, b )
+	//sin espacio antes del parentesis
+	definir aux como entero
+	Hacer
+		
+	 
+	aux<-a       //a aux le asigno a
+	a<-b           //a a le asigno b
+	b<-aux         // a b le asigno aux
+Hasta Que b=aux
+Escribir  a," - ",b
+FinSubProceso
