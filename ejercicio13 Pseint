@@ -1,0 +1,29 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+	
+	Funcion num <- enter ( c )
+		definir num como entero
+		
+		Repetir
+			num<-ConvertirANumero(c)
+			Leer  c
+		Hasta Que  longitud(c)<999
+			
+		
+			
+			Escribir "entonces el numero es: ",num	
+		 
+		
+		
+	Fin Funcion
+	
+	Algoritmo sin_titulo
+		definir c Como caracter
+		definir r Como Entero
+		escribir "ingreswe un numero de 3 cifras como maximo"
+		leer c
+		
+		escribir enter( c )
+		
+		
+FinAlgoritmo
