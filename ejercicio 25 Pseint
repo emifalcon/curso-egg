@@ -1,0 +1,32 @@
+//Crear un subproceso que rellene dos arreglos de tamaño n, con números aleatorios. Después,
+//	hacer una función que reciba los dos arreglos y diga si todos sus valores son iguales o no. La
+//			función debe devolver el resultado de está validación, para mostrar el mensaje en el algoritmo.
+//				Nota: recordar el uso de las variables de tipo lógico.
+Funcion comparacion= comparavector(tamano)
+	Definir i, contador, vector1, vector2, j Como Entero
+	Definir respuesta Como Logico
+	Dimension vector1[tamano]
+	Dimension vector2[tamano]
+
+	contador=0 
+	para i=0 Hasta tamano-1 Con Paso 1 Hacer
+		si vector1(i) = vector2(i) Entonces
+			contador=contador+1 
+		FinSi
+		
+	FinPara
+	si contador= i Entonces
+		respuesta= Verdadero
+		
+	SiNo
+		respuesta=Falso
+	FinSi
+FinFuncion	
+
+Algoritmo ej7_guia4
+	Definir tamano Como Entero 
+	Escribir "ingrese el tamaño de dos vectores"
+	leer tamano
+	Escribir "" comparavector(tamano) 
+	
+FinAlgoritmo
