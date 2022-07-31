@@ -1,0 +1,38 @@
+//Rellenar en un subproceso una matriz cuadrada con números aleatorios salvo en la diagonal
+//	principal, la cual debe rellenarse con ceros. Una vez llena la matriz debe generar otro
+//	subproceso para imprimir la matriz.
+
+Algoritmo sin_titulo
+	Definir matriz, n, m Como Entero
+	Escribir "Ingrese la dimension del cuadrado"
+	Leer n
+	m=n
+	Dimension matriz(n,m)
+	rellenar(matriz,n,m)
+	imprim(matriz,n,m)
+FinAlgoritmo
+
+SubProceso rellenar(matriz,n,m)
+	definir i, j Como Entero ///contadores
+	para i=0 hasta n-1 Hacer
+		para j=0 hasta m-1 Hacer
+			Si i=j Entonces
+				matriz(i,j)=0
+			SiNo
+				matriz(i,j)=aleatorio(0,9)
+			FinSi
+		FinPara
+	FinPara
+	
+FinSubProceso
+
+SubProceso imprim(matriz,n,m)
+	Definir i, j como entero ///Contadores
+	para i=0 hasta n-1 Hacer
+		para j=0 hasta m-1 hacer
+			Escribir matriz(i,j) " " Sin Saltar
+		FinPara
+		escribir ""
+	FinPara
+FinSubProceso
+
