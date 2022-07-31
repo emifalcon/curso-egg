@@ -1,0 +1,31 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Funcion verd <- login ( x,z )
+	definir cont,c Como Entero
+	definir verd como logico
+	
+	cont<-1
+	c<-1
+	si x<> "usuario" y z<>"contra" Entonces
+		Hacer
+			cont<-cont+1
+			Escribir "ingrese el usuario intento mº", cont
+			leer x
+			escribir "escribir contraseña"
+			leer z
+		Mientras Que cont<=2
+		verd<-falso
+	sino
+		verd<-Verdadero
+	FinSi
+	
+Fin Funcion
+
+Algoritmo sin_titulo
+	definir usuario,contra Como Caracter
+	escribir "ingrese usuario"
+	leer usuario
+	Escribir "contraseña"
+	leer contra
+	escribir login( usuario,contra )
+FinAlgoritmo
