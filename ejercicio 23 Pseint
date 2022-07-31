@@ -1,0 +1,32 @@
+/Realizar un programa que rellene un vector de tamaño N, con valores ingresados por el
+//usuario. A continuación, se deberá crear una función que reciba el vector y devuelva el valor
+//más grande del vector.
+Algoritmo ej5_guia4
+	Definir i , vector , n , num, max Como Entero
+	Escribir "ingrese el tamaño del vector"
+	leer n
+	
+	Dimension vector(n) 
+	Escribir "ingrese los valores del vector" n
+	Para i=0 Hasta n-1 Con Paso 1 Hacer
+		Leer vector(i) 
+	
+	FinPara
+	
+	Escribir "el valor mas grande del vector es " maximo(vector,n)
+	
+	
+FinAlgoritmo
+
+Funcion max=maximo(vector Por Referencia, n)
+	Definir max, j Como Entero
+	max=-100
+	Para j=0 Hasta n-1	Con Paso 1 Hacer
+		si vector(j) > max Entonces
+			max=vector(j) 
+		FinSi
+	FinPara
+	
+FinFuncion
+
+
