@@ -1,0 +1,19 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Algoritmo guia3_8
+	definir n1,n2,coc,res Como Entero
+	coc<-0
+	Escribir "ingrese n1 y n2"
+	leer n1,n2
+	calculo(n1,n2,coc,res)
+	escribir"resto= ", res
+	Escribir "cociente= ", coc
+FinAlgoritmo
+
+SubProceso calculo(n1,n2,coc Por Referencia,res Por Referencia)
+	Mientras n1>=n2
+		n1<-n1-n2
+		coc<-coc+1
+	FinMientras
+	res<-n1
+FinSubProceso
