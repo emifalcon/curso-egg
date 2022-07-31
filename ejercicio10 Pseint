@@ -1,0 +1,36 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+//Realizar un programa que pida al usuario una frase y una letra a buscar en esa frase. La
+//función debe devolver la cantidad de veces que encontró la letra. Nota: recordar el uso de la
+//	función Subcadena().
+
+Algoritmo ejercicio4guia3
+	definir frase ,letra Como Caracter
+	escribir "ingrese un frase"
+	leer frase
+	escribir "¿que letra desea buscar?"
+	leer letra
+	Escribir "la letra < ",letra, " >aparece",buscador(frase,letra), " veces en la frase ingresada"
+	
+	
+	
+FinAlgoritmo
+Funcion cant <- buscador (frase,letra)
+	definir cant,i,long Como Entero
+	
+	long<-Longitud(frase)
+	cant<-0
+	para i <- 0 hasta long Con Paso 1 Hacer
+		
+	
+    si Subcadena(frase,i,i)= letra Entonces
+			cant<-cant+1
+			
+		FinSi
+	
+	FinPara
+FinFuncion
+//Funcion v1 <- buscador ( frase,letra)
+// definir v1 como caracter
+// v1= subcadena(frase,0,letra)
+//Fin Funcion
