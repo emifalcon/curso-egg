@@ -1,0 +1,15 @@
+Algoritmo actividad_1
+	definir i Como Entero
+	definir vector como caracter
+	dimension vector[5]
+	para i=0 hasta 4 Hacer
+		escribir "ingrese su " i+1 "° valor"
+		leer vector[i]
+	FinPara
+	Escribir "valor 1: " vector[0] " valor 2: " vector[1] 
+	escribir "valor 3: " vector[2] " valor 4: " vector[3]
+	escribir "valor 5: " vector[4] 
+
+FinAlgoritmo
+
+//valor 1//1//2//3//4//
