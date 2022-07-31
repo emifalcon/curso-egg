@@ -1,0 +1,42 @@
+//Dada una matriz de orden n * m (donde n y m son valores ingresados por el usuario) realizar 
+///un subprograma que llene la matriz de numeros aleatorios. Despues, crearemos otro 
+///subprograma que calcule y muestre la suma de los elementos de la matriz. Mostrar la matriz y 
+///los resultados por pantalla.
+
+Algoritmo Guia_4_10
+	
+	definir vectorA, i, j Como Entero
+	
+	escribir "De que tamaño quiere que sea la matriz"
+	leer i
+	leer j
+	
+	Dimension vectorA(i,j)
+	
+	relleno(vectorA,i,j)
+	suma(vectorA,i,j)
+	
+FinAlgoritmo
+
+SubProceso relleno (vector, tamanioUno, tamanioDos)
+	definir i, j Como Entero
+	para i = 0 Hasta tamanioUno - 1 Hacer
+		para j = 0 Hasta tamanioDos - 1 Hacer
+			vector(i,j) = Aleatorio(0,9)
+			Escribir vector(i,j)," "Sin Saltar
+		FinPara
+		Escribir " "
+	FinPara
+FinSubProceso
+
+SubProceso suma (vector, tamanioUno, tamanioDos)
+	definir i, j, total Como Entero
+	total = 0
+	para i = 0 Hasta tamanioUno - 1 Hacer
+		para j = 0 Hasta tamanioDos - 1 Hacer
+			total = total + vector(i,j)
+		FinPara
+	FinPara
+	
+	escribir "La suma total del vector es :" total
+FinSubProceso
