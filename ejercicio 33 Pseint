@@ -1,0 +1,86 @@
+Algoritmo integradorfinallPARTECOMPLETA
+	Definir  m,i,j, cont Como Entero
+	Definir  genZ,palabra,car Como cadena
+	Definir validacionpalabra Como Logico
+	validacionpalabra = Verdadero
+	
+
+
+Hacer
+	Hacer
+		Escribir " ingrese la palabra que desea evaluar(debe tener 9,16 o 1369 caracteres y ser A,B,C O D)"
+		Leer  palabra
+		palabra = Mayusculas(palabra)
+		Para i = 0 Hasta Longitud(palabra)-1 
+			car = Subcadena(palabra,i,i)
+			si car  <> "A" y car <> "B" Y car <> "C" y car <> "D"
+				validacionpalabra = Falso
+			FinSi
+			
+		FinPara
+		
+  Mientras  Que validacionpalabra = Falso
+		
+		
+		
+		
+Mientras Que Longitud(palabra) <> 9 y Longitud(palabra) <> 16 y Longitud(palabra)  <>1369
+m = rc(Longitud(palabra))
+Dimension  genZ(m,m)
+cont = 0
+Para i= 0 Hasta m-1
+	Para j= 0 Hasta  m-1
+		genZ(i,j) = Subcadena(palabra,cont,cont)
+		cont = cont +1
+	FinPara
+FinPara
+mostrarGen(genZ,m)
+buscarCoincidencias(genZ,m)
+FinAlgoritmo
+
+Funcion mostrarGen(genZ Por Referencia,m)
+	Definir  i,j Como Entero
+	Limpiar Pantalla
+	Escribir  "el gen ingresado es"
+	Escribir ""
+	Para i = 0 Hasta  m-1
+		Para j = 0 Hasta  m-1
+			Escribir  Sin Saltar" |",genZ(i,j),"| "
+		FinPara
+		Escribir ""
+	FinPara
+FinFuncion
+
+Funcion  buscarCoincidencias(genZ,m)
+	Definir  i,j, contDiag, contDiag2 Como Entero
+	Definir validacionD,validacionD2 Como cadena
+	Dimension  validacionD(m),validacionD2(m)
+	Escribir " "
+	Para i= 0 Hasta  m-1
+		Para j=0 Hasta m-1
+			si i=j
+				validacionD(i) = genZ(i,j)
+			FinSi
+			si i+j= m-1
+				validacionD2(i) = genZ(i,j)
+			FinSi
+		FinPara
+	FinPara
+	contDiag = 0
+	contDiag2 = 0
+	Para  i= 0 Hasta m-1
+		si validacionD(i) = genZ(0,0)
+			contDiag = contDiag +1
+		FinSi
+		si validacionD2(i) = genZ(0,m-1)
+			contDiag2 = contDiag2 +1
+		FinSi
+	FinPara
+	//validacion final
+	si contDiag = m y contDiag2 = m
+		Escribir "Se detecto el genz,con las letras: ", genZ(0,0)," y ", genZ(0,m-1)
+	SiNo
+		Escribir " No se detecto el genz"
+	FinSi
+FinFuncion
+
