@@ -1,0 +1,24 @@
+lgoritmo ej9g4
+	Definir matriz, n, i, j,contador Como Entero
+	Dimension matriz(5,5)
+	Escribir "ingrese un numero entero: "
+	Leer n
+	para i<-0 Hasta 4
+		para j<-0 Hasta 4
+			matriz(i,j)=azar(100)
+		FinPara
+	FinPara
+	contador = 0
+	para i<-0 Hasta 4
+		para j<-0 Hasta 4
+			si matriz(i,j) = n Entonces
+				Mostrar " la coincidencia se encontro en ", i, " | ", j
+				contador = contador + 1
+			FinSi
+		FinPara
+	FinPara
+	si contador = 0 Entonces
+		Mostrar "no se encontro el numero"
+	FinSi
+	
+FinAlgoritmo
