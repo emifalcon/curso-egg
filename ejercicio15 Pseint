@@ -1,0 +1,44 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Funcion sueldo <- sueldoempl ( dia,turno,cant,fest )
+	definir sueldo,car como real 
+	car<-0
+	sueldo <-0
+	
+	Segun fest
+		"si":  si turno="diurno" Entonces
+				car<-cant*90
+				sueldo<-((cant/100)*10)+car
+			SiNo
+				car<-(cant*125)
+				sueldo<-(car/100*15)+car
+			FinSi
+		"no":
+			si turno="diurno" Entonces
+				sueldo<-(cant*90)
+			SiNo
+				sueldo<-(cant*125)
+			FinSi
+			
+	FinSegun
+	
+Fin Funcion
+
+Algoritmo sin_titulo
+	definir nombre,dia,turno,cat,fest Como Caracter
+	definir plata,cant Como Real
+	
+	Escribir "ingrese el nolmbre"
+	leer nombre
+	escribir "definir el dia de la semana"
+	leer dia
+	escribir "su turno es diurno o nocturno"
+	leer turno
+	escribir "escriba la cantidad de hora "
+	leer cant
+	Escribir "fue dia festivo en la semana si para  para no"
+	leer fest
+	plata<-sueldoempl(dia,turno,cant,fest)
+	escribir "su salario es " plata
+	
+FinAlgoritmo
