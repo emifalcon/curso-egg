@@ -1,0 +1,21 @@
+# curso-egg
+Trabajos/Ejercicios de curso de programacion desde cero
+Proceso sin_titulo
+	Definir  palabra Como Caracter
+	Definir  num Como Entero
+	Escribir  "la palabra es: "
+	Leer  palabra
+	Escribir  "el numero es: "
+	Leer  num
+	
+	Mientras Longitud(palabra)<=3
+		
+		
+	
+		Escribir"El numero entero devuelvo es: " ConvertirANumero(palabra) + num
+	Leer palabra
+		
+	
+	Fin Mientras
+	
+FinProceso
