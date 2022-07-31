@@ -1,0 +1,32 @@
+Algoritmo actividad_2
+	definir resultado,i , resultadom Como reales
+	dimension resultado[11]
+	para i<-0 hasta 9 Hacer
+		escribir "ingrese su " i+1 "° valor"
+		leer resultado[i]
+	FinPara
+	para i<-0 hasta 9 Hacer
+		si i=0 Entonces
+			resultado[10]<-resultado[0] //iguale la ultima casilla a la primera para ocupar su valor
+		SiNo
+			resultado[10]<-resultado[10]+resultado[i]
+		FinSi
+	FinPara
+	escribir "la suma de los valores es: " resultado[10]
+	para i<-0 hasta 9 Hacer
+		si i<-0 Entonces
+			resultado[10]<-resultado[0] //iguale la ultima casilla a la primera para ocupar su valor
+		SiNo
+			resultadoR <-  resultado[10] - resultado[i]
+		FinSi
+	FinPara
+	escribir "la resta de los valores es " resultadoR
+	para i<-0 hasta 9 Hacer
+		si i<-0 Entonces
+			resultado[10]<-resultado[i] //iguale la ultima casilla a la primera para ocupar su valor
+		SiNo
+		 resultadom <- resultado[10] * resultado[i]
+		FinSi
+	FinPara
+	escribir "la multiplicaion de los valores es: " ,resultadom
+FinAlgoritmo
